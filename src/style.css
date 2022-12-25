@@ -1,0 +1,161 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --hue: 30;
+  --hue2: 25;
+
+  --font-sm: 0.8rem;
+  --font-base: 1rem;
+  --font-md: 1.25rem;
+  --font-lg: 2rem;
+
+  --font-thin: 300;
+  --font-normal: 500;
+  --font-bold: 700;
+
+  --spacing-xs: 0.3125rem;
+  --spacing-sm: 0.635rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.25rem;
+  --spacing-xl: 2rem;
+  --spacing-2xl: 3rem;
+  --spacing-3xl: 4rem;
+
+  --transition: all 0.5s ease-in-out;
+
+  --rounded-sm: 0.6rem;
+  --rounded-md: 0.9375rem;
+  --rounded-lg: 1.875rem;
+  --rounded-full: 50%;
+
+  --primary-color: hsl(var(--hue), 70%, 60%);
+  --accent-color: hsl(var(--hue2), 60%, 55%);
+
+  --primary-color-dark: hsl(var(--hue), 57%, 50%);
+  --primary-color-light: hsl(var(--hue), 69%, 70%);
+
+  --background-color: hsl(var(--hue), 60%, 99%);
+  --surface-color: hsl(var(--hue), 40%, 100%);
+
+  --gradient: linear-gradient(--primary-color, #e91e63);
+
+  --text-color-dark: hsl(var(--hue), 5%, 35%);
+  --text-color: hsl(var(--hue), 5%, 55%);
+  --text-color-light: hsl(var(--hue), 90%, 99%);
+  --accent-text: hsl(var(--hue), 57%, 53%);
+
+  --shadow: 2px 2px 8px rgba(128, 128, 128, 0.15);
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  min-height: 100vh;
+  font-family: "Roboto", sans-serif;
+  line-height: 1;
+  width: 100%;
+  transition: var(--transition);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  text-transform: capitalize;
+  line-height: 1.25;
+  margin-bottom: 0.75rem;
+  color: var(--text-color-dark);
+  font-weight: var(--font-bold);
+}
+h3,
+h4 {
+  font-weight: var(--font-normal);
+}
+
+h1 {
+  font-size: clamp(2rem, 11.25rem + 2vw, 3rem);
+}
+
+h2 {
+  font-size: clamp(1.5rem, 1rem + 1.6vw, 2.25rem);
+}
+h3 {
+  font-size: clamp(1.25rem, 0.875rem + 1.6vw, 1.75rem);
+}
+h4 {
+  font-size: clamp(1.125rem, 0.625rem + 1.2vw, 1.25rem);
+}
+
+a {
+  color: var(--text-color-light);
+  font-weight: 300;
+  text-decoration: none;
+  transition: var(--transition);
+  cursor: pointer;
+  display: inline-block;
+}
+
+p {
+  margin-top: 0;
+  font-size: clamp(00.875rem, 00.625rem + 0.8vw, 1);
+  color: var(--text-color);
+}
+small {
+  color: var(--text-color);
+  font-size: var(--font-sm);
+  font-weight: 300;
+}
+ul {
+  list-style-type: none;
+}
+main {
+  height: 100%;
+  width: 100%;
+}
+input {
+  outline: none;
+  padding-block: var(--spacing-sm);
+  border-radius: var(--rounded-md);
+  text-indent: var(--spacing-sm);
+}
+section {
+  position: relative;
+  width: 85%;
+  margin-inline: auto;
+  color: var(--text-color);
+  transition: var(--transition);
+  padding-top: var(--spacing-2xl);
+}
+img {
+  display: block;
+  object-fit: cover;
+  width: 100%;
+  transition: var(--transition);
+}
+button {
+  font-family: Poppins, sans-serif;
+  position: relative;
+  background-color: transparent;
+  color: var(--primary-color);
+  text-transform: capitalize;
+  padding: var(--spacing-xs) var(--spacing-md);
+  border: 2px solid var(--primary-color);
+  border-radius: var(--rounded-sm);
+  cursor: pointer;
+  transition: var(--transition);
+  z-index: 1;
+  font-size: var(--font-sm);
+}
+button:hover {
+  background-color: var(--primary-color);
+  color: var(--text-color-light);
+  box-shadow: var(--shadow);
+}
