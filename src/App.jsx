@@ -1,6 +1,7 @@
 import React from "react";
 import Destinations from "./components/Destinations/Destinations";
-import Stats from "./components/Stats/Stats";
+import About from "./components/About/About";
+import Services from "./components/Services/Services";
 
 import Cta from "./components/Cta/Cta";
 import Testimonials from "./components/Testimonials/Testimonials";
@@ -10,7 +11,8 @@ function App() {
   return (
     <div className="App">
       <Destinations />
-      <Stats />
+      <About />
+      <Services />
       <Testimonials />
       <Cta />
       <Footer />
