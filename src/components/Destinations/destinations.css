@@ -1,9 +1,3 @@
-h1 {
-  text-transform: uppercase;
-}
-span {
-  color: var(--primary-color);
-}
 .card-list {
   width: 100%;
   display: flex;
@@ -18,12 +12,13 @@ span {
   overflow: hidden;
   border-radius: var(--rounded-md);
   background: var(--surface-color);
-  box-shadow: var(--shadow);
-  translate: 0px 0px;
+  box-shadow: none;
+  scale: 1;
   transition: var(--transition);
 }
 .card:hover {
-  translate: 0px -20px;
+  scale: 1.05;
+  box-shadow: var(--shadow);
 }
 .card-image {
   height: 200px;
@@ -45,6 +40,14 @@ span {
   align-self: center;
 }
 @media (max-width: 767px) {
+  .card-list {
+    gap: var(--spacing-xl);
+  }
+  .card {
+    width: 250px;
+  }
+}
+@media (max-width: 480px) {
   .card-list {
     flex-direction: column;
     gap: var(--spacing-xl);
