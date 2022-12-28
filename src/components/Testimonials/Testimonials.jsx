@@ -1,6 +1,20 @@
 import React from "react";
 import "./testimonials.css";
-import image from "../../images/me-about.jpg";
+
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+
+import {
+  BsFillArrowRightCircleFill,
+  BsFillArrowLeftCircleFill,
+} from "react-icons/bs";
+
+// import required modules
+import { Navigation, Pagination } from "swiper";
 
 export default function Testimonials() {
   return (
@@ -19,10 +33,6 @@ export default function Testimonials() {
 
           <TinyCardsList />
         </div>
-
-        <div className="testimonials-image">
-          <img src={image} alt={"adventurer"} />
-        </div>
       </div>
     </section>
   );
@@ -33,34 +43,63 @@ const data = [
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente et quas aliquid, repellat neque aperiam.",
     name: "Happy client",
     desc: "Entrepreneur",
+    img: "/assets/me-about.jpg",
   },
-  // {
-  //   comment:
-  //     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente et quas aliquid, repellat neque aperiam.",
-  //   name: "Happy client",
-  //   desc: "Entrepreneur",
-  // },
-  // {
-  //   comment:
-  //     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente et quas aliquid, repellat neque aperiam.",
-  //   name: "Happy client",
-  //   desc: "Entrepreneur",
-  // },
+  {
+    comment:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente et quas aliquid, repellat neque aperiam.",
+    name: "Happy client",
+    desc: "Entrepreneur",
+    img: "/assets/me-about.jpg",
+  },
+  {
+    comment:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente et quas aliquid, repellat neque aperiam.",
+    name: "Happy client",
+    desc: "Entrepreneur",
+    img: "/assets/me-about.jpg",
+  },
 ];
 
 function TinyCardsList() {
   return (
     <div className="testimonials-list">
-      {data.map((x, index) => (
-        <TinyCards key={index} {...x} />
-      ))}
+      <Swiper
+        pagination={true}
+        slidesPerView={3}
+        spaceBetween={20}
+        modules={[Pagination]}
+        grabCursor={true}
+      
+        breakpoints={{
+          // when window width is >= 320px
+          380: {
+            slidesPerView: 1,
+          },
+          // when window width is >= 480px
+          769: {
+            slidesPerView: 2,
+          },
+          // when window width is >= 640px
+          1024: {
+            slidesPerView: 3,
+          },
+        }}
+      >
+        {data.map((x, index) => (
+          <SwiperSlide key={index}>
+            <TinyCards {...x} />
+          </SwiperSlide>
+        ))}
+      </Swiper>
     </div>
   );
 }
-function TinyCards({ comment, name, desc }) {
+function TinyCards({ img, comment, name, desc }) {
   return (
     <div className="testimonials-card">
-      <p>"{comment}"</p>
+      <img src={img} alt={name} />
+      <p className="testimonials-comment"> "{comment}"</p>
       <h4>{name}</h4>
       <p>{desc}</p>
     </div>
