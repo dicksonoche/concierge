@@ -36,7 +36,7 @@
   --accent-color: hsl(var(--hue2), 60%, 55%);
 
   --primary-color-dark: hsl(var(--hue), 57%, 50%);
-  --primary-color-light: hsl(var(--hue), 90%, 92%);
+  --primary-color-light: hsl(var(--hue), 90%, 90%);
 
   --background-color: hsl(var(--hue), 40%, 97%);
   --surface-color: hsl(var(--hue), 40%, 100%);
