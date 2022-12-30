@@ -1,46 +1,62 @@
 .testimonials-section {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
+  flex-direction: column;
   width: 100%;
   gap: var(--spacing-2xl);
+}
+.testimonials-text {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
 }
 .testimonials-list {
   display: flex;
   gap: var(--spacing-lg);
   align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  padding-block: var(--spacing-2xl);
+  justify-content: center;
+  width: 70%;
+  overflow-y: hidden;
+  height: 350px;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  background: var(--surface-color);
+  box-shadow: var(--shadow);
+  border-radius: var(--rounded-sm);
+
+  position: relative;
+  transition: var(--transition);
+  /* overflow: hidden; */
 }
 .testimonials-card {
-  width: 350px;
-  background: var(--primary-color-light);
-  border-radius: var(--rounded-sm);
-  padding: var(--spacing-sm) var(--spacing-sm);
-  position: relative;
-  box-shadow: var(--shadow);
-  transition: var(--transition);
+  text-align: center;
+  display: grid;
+  place-items: center;
 }
-.testimonials-card:hover {
-  background: var(--surface-color);
-  scale: 1.4;
-  z-index: 1000;
+.testimonials-card-image,
+.testimonials-comment {
+  display: grid;
+  width: 100%;
+  place-items: center;
 }
+
 .testimonials-card img {
-  height: 90px;
-  width: 90px;
+  margin-top: var(--spacing-lg);
+  height: 120px;
+  width: 120px;
   border-radius: 50%;
-  position: absolute;
-  top: -40px;
-  left: 20px;
-  border: 2px solid var(--surface-color);
+  border: 5px solid var(--background-color);
 }
-.testimonials-card:hover.testimonials-card img {
-  border: 2px solid var(--primary-color);
+.swiper-button-quote {
+  color: var(--primary-color);
+  font-size: 1.5rem;
 }
 .testimonials-comment {
-  margin-top: 50px;
+  margin-top: var(--spacing-lg);
+
+  max-width: 600px;
+  gap: var(--spacing-sm);
 }
 
 @media (max-width: 767px) {
@@ -49,7 +65,12 @@
   }
   .testimonials-card:hover {
     background: var(--surface-color);
-    scale: 1.2;
-    z-index: 1000;
+  }
+  .testimonials-list {
+    width: 90%;
+  }
+  .testimonials-card img {
+    height: 80px;
+    width: 80px;
   }
 }

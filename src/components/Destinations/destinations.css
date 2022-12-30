@@ -1,16 +1,6 @@
-.card-list {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  flex-wrap: wrap;
-  gap: var(--spacing-xl);
-  position: relative;
-}
-.swiper-wrapper {
-  padding-left: var(--spacing-2xl);
+.destinations-section .swiper-wrapper {
   padding-block: var(--spacing-2xl);
+  padding-left: var(--spacing-2xl);
 }
 
 .swiper-button-next::after,
@@ -20,7 +10,15 @@
 .swiper-button-next,
 .swiper-button-prev {
   color: var(--primary-color) !important;
+  position: absolute !important;
+  top: 50% !important;
 }
+/* .swiper-button-prev {
+  left: -20px !important;
+}
+.swiper-button-prev {
+  right: -20px !important;
+} */
 
 .card {
   width: 250px;
@@ -60,6 +58,15 @@
   }
   .card {
     width: 250px;
+  }
+  .card-list {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 0;
+    position: relative;
   }
 }
 @media (max-width: 480px) {

@@ -12,58 +12,7 @@ import {
 
 // import required modules
 import { Navigation } from "swiper";
-
-const data = [
-  {
-    img: "/assets/img-2.jpg",
-    title: "serayu rafting",
-    desc: "Dieng Indonesia",
-    price: "20",
-    rating: "4.5",
-  },
-  {
-    img: "/assets/img-2.jpg",
-    title: "serayu rafting",
-    desc: "Dieng Indonesia",
-    price: "20",
-    rating: "4.5",
-  },
-  {
-    img: "/assets/img-2.jpg",
-    title: "serayu rafting",
-    desc: "Dieng Indonesia",
-    price: "20",
-    rating: "4.5",
-  },
-  {
-    img: "/assets/img-2.jpg",
-    title: "serayu rafting",
-    desc: "Dieng Indonesia",
-    price: "20",
-    rating: "4.5",
-  },
-  {
-    img: "/assets/img-2.jpg",
-    title: "serayu rafting",
-    desc: "Dieng Indonesia",
-    price: "20",
-    rating: "4.5",
-  },
-  {
-    img: "/assets/img-2.jpg",
-    title: "serayu rafting",
-    desc: "Dieng Indonesia",
-    price: "20",
-    rating: "4.5",
-  },
-  {
-    img: "/assets/img-2.jpg",
-    title: "serayu rafting",
-    desc: "Dieng Indonesia",
-    price: "20",
-    rating: "4.5",
-  },
-];
+import data from "./data";
 
 function Card({ img, title, desc, price }) {
   return (
@@ -99,7 +48,7 @@ function CardList() {
     <div className="card-list">
       <Swiper
         slidesPerView={3}
-        spaceBetween={20}
+        spaceBetween={0}
         modules={[Navigation]}
         grabCursor={true}
         className="destinations-slider"
@@ -113,15 +62,13 @@ function CardList() {
         }
         onSlideChange={(swiper) => {
           var realIndex = swiper.realIndex;
-          console.log(swiper);
+
           if (swiper.isEnd) {
             return (navigationNextRef.current.style.display = "none");
           }
           if (realIndex == 0) {
-            console.log(realIndex + " - hide arrow");
             return (navigationPrevRef.current.style.display = "none");
           } else {
-            console.log(realIndex + " - show arrow");
             navigationPrevRef.current.style.display = "block";
             navigationNextRef.current.style.display = "block";
           }
@@ -132,12 +79,12 @@ function CardList() {
         }}
         breakpoints={{
           // when window width is >= 320px
-          380: {
-            slidesPerView: 1,
+          300: {
+            slidesPerView: 3,
           },
           // when window width is >= 480px
           769: {
-            slidesPerView: 2,
+            slidesPerView: 4,
           },
           // when window width is >= 640px
           1024: {
@@ -164,7 +111,7 @@ function CardList() {
 
 export default function Destinations() {
   return (
-    <section>
+    <section className="destinations-section">
       <h2>
         Find <span>popular </span>
         <br /> destinations

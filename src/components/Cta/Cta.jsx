@@ -9,7 +9,7 @@ export default function Cta() {
           <h2>
             Get started with
             <br />
-            <span>JetVoy</span>
+            <span>JetVoy Concierge</span>
           </h2>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed
