@@ -28,10 +28,10 @@
   box-shadow: none;
   scale: 1;
   transition: var(--transition);
+  box-shadow: var(--shadow);
 }
 .services-card:hover {
-  scale: 1.05;
-  box-shadow: var(--shadow);
+  scale: 1.1;
 }
 .services-card img {
   width: 30px;

@@ -6,6 +6,13 @@
   border-radius: var(--rounded-md);
   width: 100%;
   gap: var(--spacing-2xl);
+  color: var(--text-color-light);
+}
+.cta-section p {
+  color: var(--text-color-light);
+}
+.cta-section button {
+  color: var(--text-color-light);
 }
 .cta-text {
   display: flex;
@@ -15,4 +22,10 @@
   text-align: center;
   width: 50%;
   padding-block: var(--spacing-2xl);
+  color: var(--text-color-light);
+}
+@media (max-width: 767px) {
+  .cta-text {
+    width: 80%;
+  }
 }
