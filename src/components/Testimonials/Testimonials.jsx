@@ -90,9 +90,9 @@ function CardList() {
   );
 }
 
-export default function Destinations() {
+export default function Testimonials({ secId }) {
   return (
-    <section>
+    <section id={secId}>
       <div className="testimonials-section">
         <div className="testimonials-text">
           <h2>

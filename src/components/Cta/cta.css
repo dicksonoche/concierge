@@ -7,6 +7,7 @@
   width: 100%;
   gap: var(--spacing-2xl);
   color: var(--text-color-light);
+  margin-bottom: var(--spacing-3xl);
 }
 .cta-section p {
   color: var(--text-color-light);

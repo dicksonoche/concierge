@@ -19,6 +19,12 @@
   gap: var(--spacing-2xl);
   padding-block: var(--spacing-2xl);
 }
+@media (max-width: 767px) {
+  .services-list {
+    flex-direction: column;
+  }
+}
+
 .services-card {
   width: fit-content;
   max-width: 250px;

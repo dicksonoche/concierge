@@ -4,7 +4,7 @@ header {
   justify-content: space-between;
   height: 80px;
   padding: 0 2rem;
-  background-color: blue;
+  background-color: var(--primary-color);
   color: white;
 }
 
@@ -17,6 +17,9 @@ nav a {
 }
 
 nav a:hover {
+}
+.navbar {
+  text-transform: capitalize;
 }
 
 header .nav-btn {
@@ -67,7 +70,7 @@ nav {
     align-items: center;
     justify-content: center;
     gap: 1.5rem;
-    background-color: blue;
+    /* background-color: blue; */
     transition: 1s;
     transform: translateY(-100vh);
   }

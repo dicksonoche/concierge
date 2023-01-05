@@ -1,0 +1,17 @@
+.btnScrollToTop {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  font-size: 30px;
+  border: none;
+  z-index: 99;
+  color: var(--primary-color-dark);
+  cursor: pointer;
+  /* display: none; */
+}
+.btnScrollToTop.show {
+  display: block;
+}
+.btnScrollToTop.hide {
+  display: none;
+}
