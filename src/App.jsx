@@ -1,4 +1,5 @@
 import React from "react";
+import Scroll from "./utilities/Scroll/Scroll";
 import Destinations from "./components/Destinations/Destinations";
 import About from "./components/About/About";
 import Services from "./components/Services/Services";
@@ -14,11 +15,12 @@ function App() {
     <div className="App">
       <Navbar />
       <Hero />
-      <Destinations />
-      <About />
-      <Services />
-      <Testimonials />
-      <Cta />
+      <Scroll />
+      <Destinations secId="section2" />
+      <About secId="section3" />
+      <Services secId="section4" />
+      <Testimonials secId="section5" />
+      <Cta secId="section6" />
       <Footer />
     </div>
   );

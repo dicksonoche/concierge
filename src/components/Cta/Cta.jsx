@@ -1,9 +1,9 @@
 import React from "react";
 import "./cta.css";
 
-export default function Cta() {
+export default function Cta({ secId }) {
   return (
-    <section>
+    <section id={secId}>
       <div className="cta-section">
         <div className="cta-text">
           <h2>

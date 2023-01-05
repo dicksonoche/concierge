@@ -2,9 +2,9 @@ import React from "react";
 import image from "../../images/me-about.jpg";
 import "./about.css";
 
-export default function About() {
+export default function About({ secId }) {
   return (
-    <section>
+    <section id={secId}>
       <div className="about-section">
         <div className="about-text">
           <small>about us</small>

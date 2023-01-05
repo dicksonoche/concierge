@@ -2,9 +2,9 @@ import React from "react";
 import "./services.css";
 import image from "../../images/me-about.jpg";
 
-export default function Services() {
+export default function Services({ secId }) {
   return (
-    <section>
+    <section id={secId}>
       <div className="services-section">
         <div className="services-text">
           <h2>We provide the best</h2>

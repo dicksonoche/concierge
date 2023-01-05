@@ -47,8 +47,8 @@ function CardList() {
   return (
     <div className="card-list">
       <Swiper
-        slidesPerView={3}
-        spaceBetween={0}
+        slidesPerView={"auto"}
+        spaceBetween={1}
         modules={[Navigation]}
         grabCursor={true}
         className="destinations-slider"
@@ -80,11 +80,11 @@ function CardList() {
         breakpoints={{
           // when window width is >= 320px
           300: {
-            slidesPerView: 3,
+            slidesPerView: 1,
           },
           // when window width is >= 480px
-          769: {
-            slidesPerView: 4,
+          767: {
+            slidesPerView: 2,
           },
           // when window width is >= 640px
           1024: {
@@ -109,9 +109,9 @@ function CardList() {
   );
 }
 
-export default function Destinations() {
+export default function Destinations({ secId }) {
   return (
-    <section className="destinations-section">
+    <section id={secId} className="destinations-section">
       <h2>
         Find <span>popular </span>
         <br /> destinations
