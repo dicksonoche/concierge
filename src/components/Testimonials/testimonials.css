@@ -28,6 +28,11 @@
   transition: var(--transition);
   /* overflow: hidden; */
 }
+.testimonials-section .swiper-button-next,
+.testimonials-section .swiper-button-prev {
+  color: var(--primary-color) !important;
+  position: absolute !important;
+}
 .testimonials-card {
   text-align: center;
   display: grid;
@@ -94,9 +99,8 @@
 @media (max-width: 480px) {
   .testimonials-section .swiper-button-next,
   .testimonials-section .swiper-button-prev {
-    color: var(--primary-color) !important;
-    position: absolute !important;
     bottom: 5% !important;
+    top: initial;
   }
   .testimonials-section .swiper-wrapper {
     padding-bottom: 2rem;

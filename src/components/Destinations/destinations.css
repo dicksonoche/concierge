@@ -10,7 +10,7 @@
 .destinations-section .swiper-button-prev {
   color: var(--primary-color) !important;
   position: absolute !important;
-  top: 50% !important;
+  top: 50%;
 }
 .swiper-slide.swiper-slide-active {
   display: flex !important;
