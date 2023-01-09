@@ -9,6 +9,9 @@ function Navbar() {
   const showNavbar = () => {
     navRef.current.classList.toggle("responsive_nav");
   };
+  const removeNav = () => {
+    navRef.current.classList.remove("responsive_nav");
+  };
 
   const data = [
     {
@@ -51,6 +54,7 @@ function Navbar() {
             smooth={true}
             offset={-20}
             duration={500}
+            onClick={removeNav}
           >
             {x.title}{" "}
           </Link>
@@ -73,3 +77,4 @@ function Navbar() {
 }
 
 export default Navbar;
+``;

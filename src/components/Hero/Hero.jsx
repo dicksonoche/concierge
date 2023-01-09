@@ -7,7 +7,7 @@ import "./herostyles.css";
 function Hero({ secId }) {
   return (
     <div className="hero" id={secId}>
-      <img className="hero-img" src={bgImg} alt="beach" />
+      {/* <img className="hero-img" src={bgImg} alt="beach" /> */}
       <div className="overlay"></div>
       <div className="content">
         <h1>Explore the world with confidence</h1>
@@ -20,7 +20,7 @@ function Hero({ secId }) {
           <div>
             <input type="text" placeholder="Search Destination" />
           </div>
-          <button>
+          <button className="hero-button">
             <AiOutlineSearch className="icon" />
           </button>
         </form>
