@@ -20,7 +20,7 @@ function Hero({ secId }) {
           <div>
             <input type="text" placeholder="Search Destination" />
           </div>
-          <button>
+          <button className="hero-button">
             <AiOutlineSearch className="icon" />
           </button>
         </form>
