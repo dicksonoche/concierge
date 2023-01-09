@@ -22,7 +22,7 @@ export default function About({ secId }) {
           <div>{}</div>
         </div>
 
-        <div>
+        <div className="about-image-container">
           <img src={image} alt={""} />
         </div>
       </div>
